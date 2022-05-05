@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"  style="width: 50px; height: 30px; color: #fff; background-color: #1b1b1b;">File</button>
+    <script type="module" src="index.js"></script>
+    <script>
+        let isTrue1 = true;
+        let isFalse1 = false;
+        console.log(isTrue1 ||= isFalse1);
+
+        let isTrue2 = true;
+        let isFalse2 = false;
+        console.log(isTrue2 ??= isFalse2);
+        
+        let name = {
+            firstName: "Ram",
+            lastName: "",
+        };
+        
+        console.log(name.firstName);
+        
+        // Changing the value using logical
+        // AND assignment operator
+        name.firstName &&= "Shyam";
+        
+        // Here the value changed because
+        // name.firstName is truthy
+        console.log(name.firstName);
+        
+        console.log(name.lastName);
+        
+        // Changing the value using logical 
+        // AND assignment operator
+        name.lastName &&= "Kumar";
+        
+        // Here the value remains unchanged 
+        // because name.lastName is falsy
+        console.log(name.lastName)
+    </script>
+</body>
+</html>
